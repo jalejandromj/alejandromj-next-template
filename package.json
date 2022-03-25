@@ -10,8 +10,11 @@
     "lint:fix": "next lint --dir src --fix",
     "prettier": "prettier --check --no-error-on-unmatched-pattern 'src/'",
     "prettier:fix": "prettier --write --no-error-on-unmatched-pattern 'src/'",
-    "stylelint": "stylelint --allow-empty-input 'src/**/*.styles.js' 'styles/'",
-    "verify": "npm run lint && npm run stylelint && npm run prettier"
+    "stylelint": "stylelint --allow-empty-input 'src/**/*.styles.js'",
+    "test": "CI=true jest",
+    "test:cover": "jest --coverage",
+    "verify": "npm run lint && npm run stylelint && npm run prettier",
+    "prepare": "husky install"
   },
   "dependencies": {
     "next": "12.1.0",
@@ -20,11 +23,14 @@
   },
   "devDependencies": {
     "@stylelint/postcss-css-in-js": "^0.37.2",
+    "@testing-library/jest-dom": "^5.16.3",
+    "@testing-library/react": "^12.1.4",
     "@types/node": "17.0.23",
     "@types/react": "17.0.43",
     "eslint": "8.11.0",
     "eslint-config-next": "12.1.0",
     "eslint-config-prettier": "^8.5.0",
+    "jest": "^27.5.1",
     "prettier": "2.6.1",
     "stylelint": "^14.6.0",
     "stylelint-config-prettier": "^9.0.3",
@@ -32,6 +38,7 @@
     "stylelint-config-standard": "^25.0.0",
     "stylelint-config-styled-components": "^0.1.1",
     "stylelint-processor-styled-components": "^1.10.0",
-    "typescript": "4.6.3"
+    "typescript": "4.6.3",
+    "husky": "^7.0.0"
   }
 }
