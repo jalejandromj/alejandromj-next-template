@@ -18,7 +18,7 @@ const Home: NextPage = () => {
         </h1>
 
         <p className={styles.description}>
-          Get started by Testing SIGNING COMMITS{" "}
+          Get started by Testing SIGNING COMMITS 2{" "}
           <code className={styles.code}>pages/index.tsx</code>
         </p>
 
